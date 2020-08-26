@@ -7,11 +7,11 @@ TrainSet <- TrainSet[,-1]
 pageWithSidebar(
 
   # Page header
-  headerPanel('Iris Predictor'),
+  headerPanel('Учебный проект Iris Predictor'),
 
   # Input values - входные параметры
   sidebarPanel(
-    HTML("<h3>Input parameters</h4>"),
+    HTML("<h3>Входные параметры</h4>"),
     sliderInput("Sepal.Length", label = "Sepal Length", value = 5.0,
                 min = min(TrainSet$Sepal.Length),
                 max = max(TrainSet$Sepal.Length)
@@ -26,7 +26,12 @@ pageWithSidebar(
                 min = min(TrainSet$Petal.Width),
                 max = max(TrainSet$Petal.Width)),
 
-    actionButton("submitbutton", "Submit", class = "btn btn-primary")
+    actionButton("submitbutton", "Применить", class = "btn btn-primary"),
+    
+    br(),
+    br(),
+    
+    h3("Веб-приложение собрал: В.Шлеев")
   ),
 
   mainPanel(
